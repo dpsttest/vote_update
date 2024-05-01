@@ -44,11 +44,11 @@ def app_test():
 
                 ## captcha Ex. 9 + 10 =
                 captcha = driver.find_element(By.CSS_SELECTOR, ".h-captcha > span > p")
-                print(captcha.text)
+                # print(captcha.text)
                 cap_text = captcha.text
                 cap_list = cap_text.split() # Ex. ["9", "+", "10", "="]
                 cap_answer = int(cap_list[0])+int(cap_list[2])
-                print(cap_answer)
+                # print(cap_answer)
                 driver.find_element(By.NAME, "answer").send_keys(cap_answer)
                 driver.implicitly_wait(1)
 
